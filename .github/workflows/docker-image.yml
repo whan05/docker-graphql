@@ -28,10 +28,12 @@ jobs:
     - name: Build Docker Image
       run : | 
         docker build -t fvandy05/nest-graphql-dev:0.0.2 .
+        docker build -t fvandy05/nest-graphql-dev:latest .
 
     - name: Push Docker Image
       run : | 
         docker push fvandy05/nest-graphql-dev:0.0.2
+        docker push fvandy05/nest-graphql-dev:latest
     
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
